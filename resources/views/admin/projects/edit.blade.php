@@ -74,7 +74,7 @@
             {{-- SEPARATORE --}}
 
             <div class="mb-3">
-                <label for="technologies" class="form-label">City</label>
+                <label for="technologies" class="form-label">Technologies</label>
                 <select multiple class="form-select form-select-lg" name="technologies[]" id="technologies">
                     <option value="" disabled>Select one</option>
 
@@ -98,7 +98,7 @@
             {{-- SEPARATORE --}}
 
             <div class="mb-3">
-                <label for="description" class="form-label">Description <strong class="text-danger">*</strong></label>
+                <label for="description" class="form-label">Description </label>
                 <textarea class="form-control @error('description') is-invalid @enderror" name="description" id="description"
                     rows="4" placeholder="add text">{{ old('description', $project->description) }}</textarea>
             </div>
