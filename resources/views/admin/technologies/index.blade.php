@@ -17,7 +17,7 @@
             </div>
             <!-- /.col -->
             <div class="col">
-                <h6 class="m-3">Technologies inside the database:</h6>
+                <h6 class="mb-3">Technologies inside the database:</h6>
                 <table class="table table-striped table-inverse table-responsive align-middle">
                     <thead class="thead-inverse">
                         <tr>
