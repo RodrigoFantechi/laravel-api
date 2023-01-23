@@ -144,4 +144,25 @@ body {
     box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
   }
 
-  
+ .mybtn {
+   text-decoration: none;
+   display: inline-block;
+   background-color: #2470dc;
+   color: whitesmoke;
+   padding: 0.6rem 0.85rem;
+   border-radius: 10px;
+   font-size: 1.2rem;
+   margin: 0 0.4rem;
+
+   &:hover{
+    color: white;
+    transform: scale(1.1);
+   }
+ }
+.copy{
+  text-align: center;
+  font-size: 0.75rem;
+}
+.bg-marine{
+  background-color: mediumaquamarine;
+}
