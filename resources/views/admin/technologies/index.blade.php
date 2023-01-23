@@ -1,21 +1,23 @@
 @extends('layouts.admin')
 @section('content')
+<h1 class="mb-5">Technologies</h1>
     <div class="container">
 
-        <div class="row">
+        <div class="row row-cols-1 row-cols-lg-2">
             <div class="col">
                 <form action="{{ route('admin.technologies.store') }}" method="post">
                     @csrf
                     <div class="mb-3">
-                        <label for="name" class="form-label ps-1">Aggiungi una nuova tecnologia</label>
+                        <label for="name" class="form-label ps-1">Add a new Technology</label>
                         <input type="text" name="name" id="name" class="form-control"
-                            placeholder="Inserisci nome tecnologia" aria-describedby="helpId">
+                            placeholder="Add technology name" aria-describedby="helpId">
                     </div>
                     <button type="submit" class="btn btn-primary">Add new technology</button>
                 </form>
             </div>
             <!-- /.col -->
             <div class="col">
+                <h6 class="m-3">Technologies inside the database:</h6>
                 <table class="table table-striped table-inverse table-responsive align-middle">
                     <thead class="thead-inverse">
                         <tr>
@@ -86,6 +88,7 @@
                         @endforelse
                     </tbody>
                 </table>
+                <p>Press enter to update.</p>
             </div>
             <!-- /.col -->
         </div>

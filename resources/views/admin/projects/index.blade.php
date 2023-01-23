@@ -1,13 +1,15 @@
 @extends('layouts.admin')
 @section('content')
-<h1>Projects</h1>
+
 @if (session('message'))
 <div class="alert alert-success">
     {{ session('message') }}
 </div>
 @endif
-<a class="btn btn-primary position-fixed bottom-0 end-0 m-5" href="{{route('admin.projects.create')}}" role="button"><i class="fas fa-plus fa-lg "></i></a>
+
 <div class="container">
+    <h1 class="mb-3">Projects</h1>
+    <a class="btn btn-primary mb-3" href="{{route('admin.projects.create')}}" role="button">Add new project <i class="fas fa-plus fa-lg "></i></a>
     <div class="table-responsive">
         <table class="table table-striped
     table-hover	
@@ -17,10 +19,12 @@
             <thead class="table-light">
                 <tr>
                     <th>ID</th>
-                    <th>Cover Image</th>
+                    <th>Image</th>
                     <th>Title</th>
                     <th>Slug</th>
                     <th>Description</th>
+                    <th>Type</th>
+                    <th>Technologies</th>
                     <th>Options</th>
                 </tr>
             </thead>
@@ -40,6 +44,17 @@
                     <td>{{$project->title}}</td>
                     <td>{{$project->slug}}</td>
                     <td>{{$project->description}}</td>
+                    <td>{{ $project->type ? $project->type->name : 'Untyped' }}</td>
+                    <td> @if (count($project->technologies) > 0)
+                        @foreach ($project->technologies as $techology)
+                            <div>#{{ $techology->name }}</div>
+                        @endforeach
+                    @else
+                     <span>
+                        N/D
+                     </span>
+                    @endif</td>
+
                     <td>
                         <div class="actions d-sm-flex d-xxl-block flex-column p-3 min">
                             <a href="{{route('admin.projects.show', $project->slug)}}" class="btn bg-primary"><i class="fas fa-eye fa-md text-light"></i></a>

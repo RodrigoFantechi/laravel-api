@@ -1,13 +1,17 @@
 @extends('layouts.admin')
 @section('content')
-<h1>Types</h1>
+
+
+
+
 @if (session('message'))
 <div class="alert alert-success">
     {{ session('message') }}
 </div>
 @endif
-<a class="btn btn-primary position-fixed bottom-0 end-0 m-5" href="{{route('admin.types.create')}}" role="button"><i class="fas fa-plus fa-lg "></i></a>
 <div class="container">
+    <h1 class="mb-3">Types</h1>
+    <a class="btn btn-primary mb-3" href="{{route('admin.types.create')}}" role="button">Add new type <i class="fas fa-plus fa-lg "></i></a>
     <div class="table-responsive">
         <table class="table table-striped
     table-hover	

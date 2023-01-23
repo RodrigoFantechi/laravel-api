@@ -35,6 +35,18 @@ body {
   }
   }
 
+  .image-default{
+    padding-top: 0.5rem;
+    width: 50px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    svg{
+
+      object-fit:cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
   .image{
     
     width: 50px;
