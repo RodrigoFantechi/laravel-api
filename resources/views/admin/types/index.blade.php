@@ -76,6 +76,7 @@
             </tfoot>
         </table>
     </div>
+    {{$types->links('vendor.pagination.bootstrap-5')}}
 </div>
 
 @endsection
