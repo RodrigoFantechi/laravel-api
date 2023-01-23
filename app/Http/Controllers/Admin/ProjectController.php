@@ -8,6 +8,7 @@ use App\Http\Requests\UpdateProjectRequest;
 use App\Models\Technology;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Type;
+use Illuminate\Pagination\Paginator;
 
 class ProjectController extends Controller
 {
@@ -19,7 +20,7 @@ class ProjectController extends Controller
     public function index()
     {
         
-        $projects = Project::orderByDesc('id')->get();
+        $projects = Project::paginate(5);
         return view('admin.projects.index', compact('projects'));
     }
 

@@ -98,7 +98,9 @@
 
             </tfoot>
         </table>
+        {{$projects->links('vendor.pagination.bootstrap-5')}}
     </div>
+    
 </div>
 
 @endsection
