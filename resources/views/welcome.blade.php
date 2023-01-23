@@ -17,8 +17,8 @@
             <p class="col-md-8 fs-5">A simple and safe Laravel application to menage and show all your projects.<br>
                 <a href="#" class="text-decoration-none">Clicking here,</a> you will be redirect to the front-end application.
             </p>
-            <a class="mybtn btn-lg" type="button" href="https://github.com/RodrigoFantechi">Go to GitHub</a>
-            <a class="mybtn btn-lg bg-marine" type="button" href="https://github.com/RodrigoFantechi">Send Message</a>
+            <a class="mybtn btn-lg" type="button" href="#">Go to GitHub</a>
+            <a class="mybtn btn-lg bg-marine" type="button" href="#">Send Message</a>
         </div>
        
     </div>
